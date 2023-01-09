@@ -3,11 +3,9 @@ import { motion } from 'framer-motion';
 import { useForm } from "react-hook-form";
 import ContactUsPageGraphic from '@/assets/ContactUsPageGraphic.png';
 
-type Props = {
-  setSelectedPage: (value: SelectedPage) => void;
-}
+type Props = {}
 
-const ContactUs = ({ setSelectedPage }: Props) => {
+const ContactUs = (Props: Props) => {
 
   const inputStyles = `mb-5 w-full rounded-lg bg-gray-700 px-5 py-3 placeholder-white text-white border border-gray-300 focus:outline-none 
   focus:border-blue-500 focus:ring-1 focus:ring-blue-500`;
@@ -27,7 +25,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
   return (
     <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
-      <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
+      <div>
           {/* HEADER */}
           <motion.div 
             className="md:w-3/5"
@@ -146,7 +144,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
               </motion.div>
           </div>
-      </motion.div>
+      </div>
     </section>
   )
 }

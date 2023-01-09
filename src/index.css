@@ -16,3 +16,12 @@ body,
 .header-text{
   @apply basis-3/5 font-montserrat text-3xl font-bold
 }
+.nav-links{
+  @apply text-white
+}
+.activated{
+  @apply text-primary-300
+}
+.action-button{
+  @apply rounded-md bg-primary-500 text-white px-10 py-2 hover:bg-[#FF4433] hover:shadow-black-shadow
+}

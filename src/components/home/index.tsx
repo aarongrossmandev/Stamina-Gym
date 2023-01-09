@@ -1,18 +1,14 @@
 import useMediaQuery from '@/hooks/useMediaQuery';
-import ActionButton from '@/shared/ActionButton';
-import { SelectedPage } from '@/shared/types';
 import HomePageGraphic from '@/assets/HomePageGraphic.png';
 import HeroText from '@/assets/HeroText.png';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
 import SponsoredSlider from './SponsoredSlider';
+import {Link} from 'react-router-dom';
 
 
-type Props = {
-  setSelectedPage: (value: SelectedPage) => void;
-}
+type Props = {}
 
-const Home = ({ setSelectedPage }: Props) => {
+const Home = (Props: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
 
@@ -22,9 +18,8 @@ const Home = ({ setSelectedPage }: Props) => {
       className="gap-16 bg-yellow-20 py-10 md:h-full md:pb-0"
     >
       {/* IMAGE AND MAIN HEADER */}
-      <motion.div 
+      <div 
         className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6" 
-        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
         {/* MAIN HEADER */}
         <div className="z-10 mt-32 md:basis-3/5">
@@ -63,16 +58,17 @@ const Home = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x:0 }
               }}
               >
-              <ActionButton setSelectedPage={setSelectedPage}>
+              <Link to="/" 
+                  className="action-button"  
+              >
                 Join Now
-              </ActionButton>
-              <AnchorLink 
+              </Link>
+              <Link 
+                to="/"
                 className="text-sm font-bold text-primary-500 underline hover:text-blue-600"
-                onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-                href={`#${SelectedPage.ContactUs}`}
               >
                 <p>Learn More</p>
-            </AnchorLink>
+            </Link>
             </motion.div>
         </div>
 
@@ -80,7 +76,7 @@ const Home = ({ setSelectedPage }: Props) => {
         <div className="md:z-10 basis-3/5 justify-center md:ml-40 md:mt-16 md:justify-items-end md:pb-32">
           <img src={HomePageGraphic} alt="home-page-graphic" height={570} width={525} />
         </div>
-      </motion.div>
+      </div>
 
       {/* SPONSORS */}
       {isAboveMediumScreens && (

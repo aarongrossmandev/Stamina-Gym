@@ -1,9 +1,9 @@
-import ActionButton from "@/shared/ActionButton";
-import { BenefitType, SelectedPage } from "@/shared/types";
+import { BenefitType} from "@/shared/types";
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
 import { motion } from 'framer-motion';
 import Benefit from "./Benefit";
 import benefitsImage from '@/assets/benefits.png';
+import { Link } from 'react-router-dom';
 
 const container = {
   hidden: {},
@@ -33,16 +33,12 @@ const benefits: Array<BenefitType> = [
   },
 ]
 
-type Props = {
-  setSelectedPage: (value: SelectedPage) => void;
-}
+type Props = {}
 
-const Benefits = ({ setSelectedPage }: Props) => {
+const Benefits = (Props: Props) => {
   return (
     <section id="benefits" className="mx-auto min-h-full w-5/6 pb-20">
-      <motion.div 
-        onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
-      >
+      <div>
         {/* Header */}
         <motion.div 
           className="md:my-5 md:w-3/5" 
@@ -77,8 +73,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
               icon={benefit.icon}
               title={benefit.title}
               description={benefit.description}
-              setSelectedPage={setSelectedPage}
-            />
+             />
           ))}
         </motion.div>
 
@@ -139,14 +134,16 @@ const Benefits = ({ setSelectedPage }: Props) => {
                 {/* BUTTON */}
                 <div className="relative mt-16">
                   <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
-                    <ActionButton setSelectedPage={setSelectedPage}>
+                    <Link to="/" 
+                      className="action-button"
+                    >
                       Join Now
-                    </ActionButton>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-      </motion.div>
+      </div>
     </section>
   )
 }

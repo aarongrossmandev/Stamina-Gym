@@ -1,19 +1,13 @@
-import { SelectedPage } from '@/shared/types';
 import { motion } from 'framer-motion';
 import Trainer from '@/assets/trainer.png';
 
 
-type Props = {
-setSelectedPage: (value: SelectedPage) => void;
-}
 
-const Training = ({ setSelectedPage }: Props) => {
+
+const Training = () => {
   return (
-    <section id="training" className="w-full bg-gray-1000 py-20">
-      <motion.div 
-        className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6" 
-        onViewportEnter={() => setSelectedPage(SelectedPage.Training)}
-        >
+    <section className="w-full bg-gray-1000 py-20">
+      <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
           <motion.div 
           className="mx-auto w-4/6"
           initial="hidden"
@@ -41,7 +35,7 @@ const Training = ({ setSelectedPage }: Props) => {
           <img src={Trainer} alt="trainer-graphic" />
          </div>
 
-        </motion.div>
+        </div>
     </section>
   )
 }
