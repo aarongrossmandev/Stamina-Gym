@@ -6,9 +6,7 @@ import SponsoredSlider from './SponsoredSlider';
 import {Link} from 'react-router-dom';
 
 
-type Props = {}
-
-const Home = (Props: Props) => {
+const Home = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
 
@@ -58,14 +56,14 @@ const Home = (Props: Props) => {
                 visible: { opacity: 1, x:0 }
               }}
               >
-              <Link to="/" 
+              <Link to="/contact" 
                   className="action-button"  
               >
                 Join Now
               </Link>
               <Link 
-                to="/"
-                className="text-sm font-bold text-primary-500 underline hover:text-blue-600"
+                to="/benefits"
+                className="text-sm font-bold text-primary-500 underline hover:text-blue-900"
               >
                 <p>Learn More</p>
             </Link>

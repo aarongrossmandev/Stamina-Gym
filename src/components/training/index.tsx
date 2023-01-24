@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import Trainer from '@/assets/trainer.png';
+import { Link } from 'react-router-dom';
 
 
 
 
 const Training = () => {
   return (
-    <section className="w-full bg-gray-1000 py-20">
+    <section className="w-full bg-black py-20">
       <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
           <motion.div 
           className="mx-auto w-4/6"
@@ -21,12 +22,15 @@ const Training = () => {
         >
           <div className="md:w-3/5 basis-2/5 text-end">
             <h1 className="header-text text-yellow-20 text-start">OUR TRAINERS</h1>
-            <p className="py-5 text-yellow-20">
+            <p className="py-5 text-start text-white">
               Our fitness instructors and trainers are some of the best in the world, with years of experience and expertise we're here
               to help you reach your goals.
             </p>
-            <button className="text-primary-100">
-              Meet Our Trainers
+            <button className="action-button">
+              <Link to="/training">
+              View More
+              </Link>
+              
             </button>
           </div>
         </motion.div>

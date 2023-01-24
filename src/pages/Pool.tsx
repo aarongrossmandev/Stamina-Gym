@@ -1,10 +1,19 @@
-import React from 'react'
+import Footer from '@/components/footer'
+import PoolAccordion from '@/components/pool/PoolAccordion'
+import PoolHero from '@/components/pool/PoolHero'
+import BannerBottom from '@/shared/BannerBottom'
 
-type Props = {}
 
-const Pool = (props: Props) => {
+
+
+const Pool = () => {
   return (
-    <div>Pool</div>
+    <div className="app">
+      <PoolHero />
+      <PoolAccordion />
+      <BannerBottom />
+      <Footer />
+    </div>
   )
 }
 

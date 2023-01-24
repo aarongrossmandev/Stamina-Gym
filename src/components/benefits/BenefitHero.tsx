@@ -2,9 +2,8 @@ import React from 'react';
 import BenefitHeroMain from '@/assets/benefits-hero.jpg';
 import { Link } from 'react-router-dom';
 
-type Props = {}
 
-const BenefitHero = (props: Props) => {
+const BenefitHero = () => {
   return (
     <section className="w-full">
       <div className="bg-gradient-to-tr from-slate-900 to-teal-900 h-[100vh] w-full flex justify-start items-center relative">

@@ -10,6 +10,10 @@ import Spa1 from '@/assets/spa1.jpg';
 import Spa2 from '@/assets/spa2.jpg';
 import Spa3 from '@/assets/spa3.jpg';
 
+import poolImage1 from '@/assets/water-aerobics-large.jpg';
+import poolImage2 from '@/assets/pool-image2.jpg';
+import poolImage3 from '@/assets/pool-image3.jpg';
+
 export const TrainerAccordion = [
   {
     title: "We find your trainer.",
@@ -67,5 +71,26 @@ export const SpaAccordionData = [
     title: "Essentials.",
     content: `Get the treatment you deserve. Our wide range of fitness spa massages focus on muscle recovery, tissue regeneration, flexibility and more. Our facial treatments improve the health and radiance of your skin while slowing signs of aging. Our specialty health spa services range from waxing to body wraps and more.`,
     image: Spa3
+  },
+]
+
+export const PoolAccordionData = [
+  {
+    title: "Calm Workouts.",
+    content: `We have pool workouts available to you with some of the best coaches to date. Whether it be swimming, water aerobics, or even water cycling we have
+    many options available to you.`,
+    image: poolImage1
+  },
+  {
+    title: "Relaxation.",
+    content: `Dont want a hard routine workout? No problem! You can use the pool just to relax or cool down after a strong workout. Use the pool just 
+    to practice free swimming if you so choose, the freedom is yours.`,
+    image: poolImage2
+  },
+  {
+    title: "Joint Pain No More.",
+    content: `Have problems working out because of your joints, or starting to develop joint pain from working out? No problem! Use our underwater training to 
+    still get a strong workout in without hurting your joints anymore.`,
+    image: poolImage3
   },
 ]

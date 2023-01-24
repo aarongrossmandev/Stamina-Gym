@@ -1,13 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import data from '../public/data/data.json'
-
 import './index.css'
-import { createBrowserRouter, RouterProvider, Route, Link, Outlet, useLoaderData } from 'react-router-dom';
-import Trainers from './pages/TrainingPage';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import HomePage  from './pages/HomePage';
 import Navbar from './components/navbar';
-import Footer from './components/footer';
 import ScrollToTop from './hooks/ScrollToTop';
 import TrainingPage from './pages/TrainingPage';
 import ClassesPage from './pages/ClassesPage';
@@ -16,6 +12,7 @@ import BenefitsPage from './pages/BenefitsPage';
 import ContactPage from './pages/ContactPage';
 import Pool from './pages/Pool';
 import SpaPage from './pages/SpaPage';
+import ErrorPage from './pages/ErrorPage';
 
 
 
@@ -34,6 +31,7 @@ const AppLayout = () => {
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

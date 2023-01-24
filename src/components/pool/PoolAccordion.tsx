@@ -1,14 +1,14 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { TrainerAccordion } from '@/shared/AccordionData'
+import { PoolAccordionData } from '@/shared/AccordionData'
 import useMediaQuery from '@/hooks/useMediaQuery';
 import { useState } from 'react';
-import image1 from '../../assets/training-image1.jpg';
-import image2 from '../../assets/training-image2.jpg';
-import image3 from '../../assets/training-image3.jpg';
+import PoolImage1 from '@/assets/water-aerobics-large.jpg';
+import PoolImage2 from '@/assets/pool-image2.jpg';
+import PoolImage3 from '@/assets/pool-image3.jpg';
 
 type Props = {}
 
-const MainContent = (props: Props) => {
+const PoolAccordion = (props: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
   const [isActive, setIsActive] = useState(0)
@@ -21,7 +21,7 @@ const MainContent = (props: Props) => {
   }
 
   return (
-    <section className="pb-12 md:pb-24">
+    <section className="pb-12 md:pb-24 bg-black">
       <motion.div 
         className="h-full w-full"
         initial="hidden"
@@ -36,13 +36,13 @@ const MainContent = (props: Props) => {
         <div className="md:pb-12 pb-4 w-4/6 mx-auto pt-8 flex flex-1 md:justify-end justify-center">
         {isAboveMediumScreens ? (
           <h1 className="md:text-6xl text-5xl font-bold text-primary-500 mt-8">
-         BUILD <br />
+         SWIM <br />
         YOUR <br /> 
         TEMPLE  
         </h1>
         ): (
           <h1 className="md:text-6xl text-5xl font-bold text-primary-500 mt-8 text-center">
-              BUILD YOUR TEMPLE
+              SWIM YOUR TEMPLE
           </h1>
         )}
             
@@ -56,7 +56,7 @@ const MainContent = (props: Props) => {
               initial={{ opacity:0}}
               animate={{ opacity: 1}}
               transition={{ duration: 2 }}
-              src={image1} alt=""
+              src={PoolImage1} alt="water aerobics in pool"
               className={isActive === 0 ? "image-show" : "image-hidden"} 
             />
             )}
@@ -67,7 +67,7 @@ const MainContent = (props: Props) => {
               initial={{ opacity:0}}
               animate={{ opacity: 1}}
               transition={{ duration: 2 }}
-              src={image2} alt="" 
+              src={PoolImage2} alt="" 
               className={isActive === 1 ? "image-show" : "image-hidden"} 
               />
             )}
@@ -78,7 +78,7 @@ const MainContent = (props: Props) => {
               initial={{ opacity:0}}
               animate={{ opacity: 1}}
               transition={{ duration: 2 }}
-              src={image3} alt="" 
+              src={PoolImage3} alt="" 
               className={isActive === 2 ? "image-show" : "image-hidden"} 
               />
             )}
@@ -88,7 +88,7 @@ const MainContent = (props: Props) => {
         </div>
 
           <div className="w-full md:w-1/2 mx-auto flex flex-col">
-          {TrainerAccordion.map((items, index) => (
+          {PoolAccordionData.map((items, index) => (
             <div key={index}>
             <div className="flex flex-col my-8 border-b border-primary-500 w-1/2 mx-auto cursor-pointer" onClick={() => toggle(index)}>
               <h4 className="text-2xl font-bold text-primary-500">{items.title}</h4>
@@ -106,4 +106,4 @@ const MainContent = (props: Props) => {
   )
 }
 
-export default MainContent;
+export default PoolAccordion;

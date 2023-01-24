@@ -32,6 +32,7 @@ const ClassesPage = (props: Props) => {
     }
 
   return (
+    
     <div className="app relative">
       <Intensity />
         <IntensityMap />
@@ -42,6 +43,7 @@ const ClassesPage = (props: Props) => {
       <BannerBottom />
         <Footer />
   </div>
+
   )
 }
 

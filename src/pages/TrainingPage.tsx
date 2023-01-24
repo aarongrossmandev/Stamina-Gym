@@ -5,14 +5,12 @@ import Footer from '@/components/footer';
 import TrainingSlider from '@/components/training/TrainingSlider';
 import ContactForms from '@/components/contactUs/ContactForms';
 
-type Props = {}
-
-const TrainingPage = ({}: Props) => {
+const TrainingPage = () => {
 
   
 
   return (
-      <div className="app">
+    <div className="app">
         <TrainingHero />
         <div className="h-full md:h-full w-full bg-black">
         <MainContent />
@@ -22,6 +20,7 @@ const TrainingPage = ({}: Props) => {
         <ContactForms />  
         <Footer />
       </div>
+      
   )
 }
 

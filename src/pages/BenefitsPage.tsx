@@ -4,12 +4,9 @@ import IndustryBest from '@/components/benefits/IndustryBest'
 import TwentyFourHour from '@/components/benefits/TwentyFourHour'
 import ContactForms from '@/components/contactUs/ContactForms'
 import Footer from '@/components/footer'
-import BannerBottom from '@/shared/BannerBottom'
-import React from 'react'
 
-type Props = {}
 
-const BenefitsPage = (props: Props) => {
+const BenefitsPage = () => {
   return (
      <div className="app">
         <BenefitHero />

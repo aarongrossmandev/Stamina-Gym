@@ -24,7 +24,7 @@ const ContactForms = (Props: Props) => {
 
   return (
     <section id="contactus" className="w-full bg-white">
-      <div className="mx-auto w-5/6 pt-0 md:pt-24 pb-32 flex flex-col md:flex-row">
+      <div className="mx-auto w-5/6 pt-12 md:pt-24 pb-32 flex flex-col md:flex-row">
         <motion.div 
           initial="hidden"
           whileInView="visible"

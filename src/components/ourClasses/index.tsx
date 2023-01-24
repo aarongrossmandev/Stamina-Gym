@@ -11,58 +11,59 @@ import Pilates from '@/assets/pilates.jpg';
 import Dance from '@/assets/dance.jpg';
 import { motion } from 'framer-motion';
 import Class from './Class';
+import { Link } from 'react-router-dom';
 
 
 
 const classes: Array<ClassType> = [
   {
     name: "Weight Training Classes",
-    description: "Gonna fill out a description here when i decide what kind of classes and maybe add a link to an individual page for it smile :)",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     image: WeightTraining,
   },
   {
     name: "Cardio Classes",
-    description: "Gonna fill out a description here when i decide what kind of classes and maybe add a link to an individual page for it smile :)",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     image: Cardio,
   },
   {
     name: "Ab Trainer Classes",
-    description: "Gonna fill out a description here when i decide what kind of classes and maybe add a link to an individual page for it smile :)",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     image: image3,
   },
   {
     name: "Yoga Classes",
-    description: "Gonna fill out a description here when i decide what kind of classes and maybe add a link to an individual page for it smile :)",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     image: Yoga,
   },
   {
     name: "Boxing Classes",
-    description: "Gonna fill out a description here when i decide what kind of classes and maybe add a link to an individual page for it smile :)",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     image: Boxing,
   },
   {
     name: "Rock Climbing Classes",
-    description: "Gonna fill out a description here when i decide what kind of classes and maybe add a link to an individual page for it smile :)",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     image: Climbing,
   },
   {
     name: "Swimming",
-    description: "Gonna fill out a description here when i decide what kind of classes and maybe add a link to an individual page for it smile :)",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     image: Swimming,
   },
   {
     name: "Cycling",
-    description: "Gonna fill out a description here when i decide what kind of classes and maybe add a link to an individual page for it smile :)",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     image: Cycling,
   },
   {
     name: "Pilates",
-    description: "Gonna fill out a description here when i decide what kind of classes and maybe add a link to an individual page for it smile :)",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     image: Pilates,
   },
   {
     name: "Dance",
-    description: "Gonna fill out a description here when i decide what kind of classes and maybe add a link to an individual page for it smile :)",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     image: Dance,
   },
 ]
@@ -71,7 +72,7 @@ const classes: Array<ClassType> = [
 
 const OurClasses = () => {
   return (
-    <section id="ourclasses" className="w-full bg-black py-40">
+    <section id="ourclasses" className="w-full bg-white py-40">
       <div>
         <motion.div 
           className="mx-auto w-5/6"
@@ -84,16 +85,21 @@ const OurClasses = () => {
                 visible: { opacity: 1, x:0 }
           }}
         >
-          <div className="md:w-3/5">
-            <h1 className="header-text">OUR CLASSES</h1>
-            <p className="py-5 text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate vero nam quis sequi debitis magnam consequuntur corporis 
-              omnis sit dignissimos?
+          <div className="md:w-2/5 text-end">
+            <h1 className="header-text text-start">OUR CLASSES</h1>
+            <p className="py-5 text-start">
+              A brief look into our selection of classes you could start your journey in today.
             </p>
+            <Link 
+              to="/classes" 
+              className="text-right border border-primary-500 p-2 text-primary-500 hover:text-white hover:bg-primary-500 rounded-md 
+              transition-all duration-500 ease-in-out">
+              View More
+            </Link>
           </div>
         </motion.div>
 
-        <div className="mt-10 h-[350px] w-full overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-primary-500 scrollbar-track-white">
+        <div className="mt-10 h-[350px] w-full overflow-x-auto cursor-grab md:cursor-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-primary-500 scrollbar-track-white">
           <ul className="w-[2800] whitespace-nowrap">
             {classes.map((item: ClassType, index) => (
               <Class 

@@ -1,5 +1,3 @@
-import { ArrowDownIcon } from '@heroicons/react/24/solid';
-import { Link } from 'react-router-dom'
 import IntensityHeroImage from '../../assets/intensity-hero.jpg';
 
 type Props = {}

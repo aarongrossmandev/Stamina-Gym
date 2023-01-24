@@ -53,7 +53,7 @@ function Navbar() {
               </ul>
               <div className={`${flexBetween} gap-8`}>
                 <p className="nav-links">Sign In</p>
-                  <Link to="/" 
+                  <Link to="/contact" 
                   className="rounded-md bg-primary-500 text-white px-4 md:px-4 xxl:px-10 py-2 border border-transparent hover:bg-primary-500/20
                    hover:text-white hover:border-primary-500 hover:shadow-black-shadow transition-all duration-500 ease-in-out"
                 >

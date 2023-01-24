@@ -6,9 +6,8 @@ import BannerBottom from '@/shared/BannerBottom'
 
 import React from 'react'
 
-type Props = {}
 
-const SpaPage = (props: Props) => {
+const SpaPage = () => {
   return (
     <div className="app">
       <SpaHero />
