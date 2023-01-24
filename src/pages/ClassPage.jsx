@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { useLoaderData, useParams, useLocation, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react'
+import { useParams, Link } from 'react-router-dom';
 import { AquaFitness, BodyMovement, intensityClass } from '../shared/Data';
 import { BsClockHistory } from 'react-icons/bs';
 import { SlCalender } from 'react-icons/sl';
 import { TfiTarget } from 'react-icons/tfi';
-import ContactUs from '@/components/contactUs';
 import Footer from '@/components/footer';
 import ContactForm from '@/components/contactUs/ContactForm';
 import { ArrowUturnLeftIcon } from '@heroicons/react/24/solid';
@@ -12,23 +11,12 @@ import { ArrowUturnLeftIcon } from '@heroicons/react/24/solid';
 
 
 const ClassPage = () => {
-  const location = useLocation();
-  const [details, setDetails] = useState("");
-  const classData = useLoaderData();
+  const [details, setDetails] = useState({});
   const { id } = useParams();
 
 
-  // useEffect(() => {
-  //   const getDetails = Data.intensityClasses.map((data:any, title:any, image:any) => {
-  //     if(data.id === id){
-  //       return setDetails(data)
-  //     }
-  //     console.log(data);
-  //   })
-  // }, [id])
-
   useEffect(() => {
-    const getDetails = intensityClass.map((data: any): void => {
+    const getDetails = intensityClass.map((data)=> {
       if (data.id === id) {
         return setDetails(data)
       }
@@ -36,7 +24,7 @@ const ClassPage = () => {
   }, [id])
 
   useEffect(() => {
-    const getDetails = BodyMovement.map((data:any): void => {
+    const getDetails = BodyMovement.map((data) => {
       if(data.id === id){
         return setDetails(data)
       }
@@ -44,7 +32,7 @@ const ClassPage = () => {
   }, [id])
 
   useEffect(() => {
-    const getDetails = AquaFitness.map((data:any): void => {
+    const getDetails = AquaFitness.map((data) => {
       if(data.id === id){
         return setDetails(data)
       }
