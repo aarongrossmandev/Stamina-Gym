@@ -22,7 +22,10 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         "gradient-redyellow": "linear-gradient(90deg, rgba(231, 67, 69, 1) 0%, rgba(238, 191, 130, 1) 100%);",
+        "gradient-redblack": "radial-gradient(circle at 49% 50%, rgba(231, 67, 69, 1) 16%, rgba(0, 0, 0, 1) 80%)",
+        "gradient-redwhite": "radial-gradient(circle at 49% 50%, rgba(231, 67, 69, 1) 16%, rgba(255, 255, 255, 1) 80%)",
         "mobile-home": "url('./assets/HomePageGraphic.png')",
+        "footer-bg": "url('./assets/footer-bg.jpg')"
         
       }),
       fontFamily: {
@@ -40,7 +43,10 @@ module.exports = {
       xxs: "350px",
       xs: "480px",
       sm: "768px",
-      md: "1060px"
+      md: "1060px",
+      lg: "1250px",
+      xl: "1400px",
+      xxl: "1700px"
     },
     boxShadow: {
       'black-shadow': '1px 10px 15px -5px rgba(0, 0, 0, .7)',

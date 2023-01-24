@@ -8,7 +8,7 @@ import SponsorGymShark from '@/assets/SponsorGymShark.png';
 
 const SponsoredSlider = () => {
   return (
-    <div className="h-[150px] w-full bg-gray-1000 py-10 overflow-hidden items-center relative">
+    <div className="h-[150px] w-full bg-black py-10 overflow-hidden items-center relative">
           <div className="mx-auto w-5/6">
             <motion.div className="flex w-3/5 items-center justify-between gap-8 absolute"
             initial="hidden"

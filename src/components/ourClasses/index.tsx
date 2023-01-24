@@ -71,7 +71,7 @@ const classes: Array<ClassType> = [
 
 const OurClasses = () => {
   return (
-    <section id="ourclasses" className="w-full bg-yellow-20 py-40">
+    <section id="ourclasses" className="w-full bg-black py-40">
       <div>
         <motion.div 
           className="mx-auto w-5/6"
@@ -86,14 +86,14 @@ const OurClasses = () => {
         >
           <div className="md:w-3/5">
             <h1 className="header-text">OUR CLASSES</h1>
-            <p className="py-5">
+            <p className="py-5 text-white">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate vero nam quis sequi debitis magnam consequuntur corporis 
               omnis sit dignissimos?
             </p>
           </div>
         </motion.div>
 
-        <div className="mt-10 h-[350px] w-full overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-primary-500 scrollbar-track-slate-600">
+        <div className="mt-10 h-[350px] w-full overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-primary-500 scrollbar-track-white">
           <ul className="w-[2800] whitespace-nowrap">
             {classes.map((item: ClassType, index) => (
               <Class 

@@ -13,15 +13,62 @@ body,
   font-family: "DM Sans", sans-serif;
   @apply text-gray-500;
 }
+
 .header-text{
-  @apply basis-3/5 font-montserrat text-3xl font-bold
+  @apply basis-3/5 font-montserrat text-3xl font-bold text-primary-500
+}
+.hero-header-text{
+  @apply font-bold md:text-5xl text-3xl text-white
 }
 .nav-links{
-  @apply text-white
+  @apply text-white hover:text-primary-300 cursor-pointer transition-all duration-500 ease-in-out
 }
 .activated{
-  @apply text-primary-300
+  @apply text-primary-300 
 }
+.action-button-small{
+  @apply rounded-md bg-primary-500 text-white px-4 py-2 border border-transparent transition-all duration-500 ease-in-out hover:bg-primary-500/30 hover:text-white hover:border-primary-500 hover:shadow-black-shadow
+}
+
 .action-button{
-  @apply rounded-md bg-primary-500 text-white px-10 py-2 hover:bg-[#FF4433] hover:shadow-black-shadow
+  @apply rounded-sm bg-primary-500 text-white px-10 py-2 border border-transparent transition-all duration-500 ease-in-out hover:bg-primary-500/30 hover:text-white hover:border-primary-500 hover:shadow-black-shadow
+}
+.action-button-xl {
+  @apply rounded-md bg-primary-500 text-white px-16 py-2 border border-transparent transition-all duration-500 ease-in-out hover:bg-primary-500/30 hover:text-white hover:border-primary-500 hover:shadow-black-shadow
+}
+
+.accordion{
+  @apply h-0 opacity-0 transition-all duration-1000 ease-in-out overflow-hidden
+}
+.accordion-show{
+  @apply py-4 opacity-100 text-gray-300 max-h-[9999px] ease-in-out transition-all duration-1000
+}
+
+.image-hide{
+  @apply opacity-0 hidden h-0
+}
+
+.image-show{
+  @apply opacity-100 block object-cover object-center rounded-lg border-4 border-primary-500 h-[100%] transition-all duration-500
+}
+
+
+/* Slider */
+
+.slide {
+  @apply absolute top-0 left-0 w-[100%] h-[100%] opacity-0 translate-x-[-50%] transition-all duration-300 ease-in-out
+}
+
+.slide-active{
+  @apply opacity-100 translate-x-0
+}
+
+/* Cards Hover */
+
+.card-info-hidden{
+  @apply  w-[120%] origin-bottom-left h-[30%] rotate-12 shadow-black-shadow absolute -bottom-16 -left-12 translate-y-96 transition-all duration-500 ease-in-out
+}
+
+.card-info-visible {
+  @apply transition-all duration-500 ease-in-out translate-y-0 bg-primary-500 text-white w-[120%] h-[30%] rotate-12 shadow-black-shadow absolute -bottom-16 -left-12
 }

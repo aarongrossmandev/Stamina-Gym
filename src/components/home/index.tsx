@@ -15,7 +15,7 @@ const Home = (Props: Props) => {
   return (
     <section 
       id="home"
-      className="gap-16 bg-yellow-20 py-10 md:h-full md:pb-0"
+      className="gap-16 bg-white py-10 md:h-full md:pb-0"
     >
       {/* IMAGE AND MAIN HEADER */}
       <div 
