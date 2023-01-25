@@ -7,35 +7,69 @@ import { TfiTarget } from 'react-icons/tfi';
 import Footer from '@/components/footer';
 import ContactForm from '@/components/contactUs/ContactForm';
 import { ArrowUturnLeftIcon } from '@heroicons/react/24/solid';
+import { ClassesClassType } from '@/shared/types';
 
 
 
 const ClassPage = () => {
-  const [details, setDetails] = useState({});
+  const [details, setDetails] = useState<Object>({});
   const { id } = useParams();
+  
+ 
+
+
+ const title = details.title
+ const largeImage = details.largeImage
+ const time = details.time 
+ const schedule = details.schedule
+ const target = details.target
+ const coach = details.coach
+ const coachImage = details.coachImage
 
 
   useEffect(() => {
-    const getDetails = intensityClass.map((data)=> {
-      if (data.id === id) {
-        return setDetails(data)
-      }
+    const getDetails = intensityClass.map((data:ClassesClassType) => {
+      if (data.id  === id) {
+        const keyDetails = {}
+       for (const key in data){
+        keyDetails[key] = data[key];
+       }
+        
+        return setDetails(keyDetails)
+      } 
+    })
+  }, [id])
+  
+  
+  
+
+
+  
+
+
+  useEffect(() => {
+    const getDetails = BodyMovement.map((data:ClassesClassType) => {
+      if (data.id  === id) {
+        const keyDetails = {}
+       for (const key in data){
+        keyDetails[key] = data[key];
+       }
+        
+        return setDetails(keyDetails)
+      } 
     })
   }, [id])
 
   useEffect(() => {
-    const getDetails = BodyMovement.map((data) => {
-      if(data.id === id){
-        return setDetails(data)
-      }
-    })
-  }, [id])
-
-  useEffect(() => {
-    const getDetails = AquaFitness.map((data) => {
-      if(data.id === id){
-        return setDetails(data)
-      }
+    const getDetails = AquaFitness.map((data:ClassesClassType) => {
+      if (data.id  === id) {
+        const keyDetails = {}
+       for (const key in data){
+        keyDetails[key] = data[key];
+       }
+        
+        return setDetails(keyDetails)
+      } 
     })
   }, [id])
 
@@ -52,23 +86,23 @@ const ClassPage = () => {
         </Link>
 
         <div className="h-full w-full bg-black/30 flex justify-between items-center">
-          <img src={details.largeImage} alt={details.title} className="h-full w-full object-cover object-top absolute mix-blend-overlay z-[-1]" />
+          <img src={largeImage} alt={title} className="h-full w-full object-cover object-center absolute mix-blend-overlay z-[-1]" />
           <div className="xxs:ml-10 xs:ml-16 md:ml-56 mb-24">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-serif font-bold">{details.title}</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-serif font-bold">{title}</h1>
           </div>
 
           <div className="mx-auto">
             <div className="">
               <BsClockHistory className="text-primary-500 w-6 h-6 sm:w-10 sm:h-10" />
-              <p className="text-white mt-4">{details.time}</p>
+              <p className="text-white mt-4">{time}</p>
             </div>
             <div className="">
               <SlCalender className="text-primary-500 w-6 h-6 sm:w-10 sm:h-10 md:mt-8" />
-              <p className="text-white mt-2 md:mt-4">{details.schedule}</p>
+              <p className="text-white mt-2 md:mt-4">{schedule}</p>
             </div>
             <div>
               <TfiTarget className="text-primary-500 w-6 h-6 sm:w-10 sm:h-10 md:mt-8" />
-              <p className="text-white mt-2 md:mt-4">{details.target}</p>
+              <p className="text-white mt-2 md:mt-4">{target}</p>
             </div>
           </div>
         </div>
@@ -84,8 +118,8 @@ const ClassPage = () => {
         <div className="w-full md:w-1/3 flex flex-col items-center">
          <h4 className="text-primary-500 text-4xl md:text-5xl font-bold tracking-widest pb-2 text-center">Meet Your Coach</h4>
          <div>
-          <img src={details.coachImage} alt="Coach Graphic" className="bg-white rounded-full object-cover object-center border-4 border-primary-500" />
-          <p className="text-primary-500 text-center text-4xl tracking-widest pt-4">{details.coach}</p>
+          <img src={coachImage} alt="Coach Graphic" className="bg-white rounded-full object-cover object-center border-4 border-primary-500" />
+          <p className="text-primary-500 text-center text-4xl tracking-widest pt-4">{coach}</p>
          </div>
         </div>
         </div>

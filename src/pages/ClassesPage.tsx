@@ -10,21 +10,9 @@ import BannerBottom from '@/shared/BannerBottom';
 
 
 
-const buttons =[
-  {
-    name: "Strength & Performance"
-  },
-  {
-    name: "Body Movement"
-  },
-  {
-    name: "Aqua Fitness"
-  }
-]
 
-type Props = {}
 
-const ClassesPage = (props: Props) => {
+const ClassesPage = () => {
   const [sideHovered, setSideHovered] = useState(false)
 
     function sideToggle(){

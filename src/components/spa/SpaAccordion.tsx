@@ -26,7 +26,7 @@ const SpaAccordion = (props: Props) => {
         className="h-full w-full"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5}}
+        viewport={{ once: true}}
         transition={{ duration: 2 }}
         variants={{
             hidden: { opacity: 0, x:500 },
@@ -48,7 +48,7 @@ const SpaAccordion = (props: Props) => {
             
       </div>
       
-        <div className="w-5/6 h-full mx-auto py-8 flex-col md:flex md:flex-row justify-between items-center overflow-hidden">
+        <div className="w-full px-8 md:px-0 md:w-5/6 h-full mx-auto py-8 flex-col md:flex md:flex-row justify-between items-center overflow-hidden">
           <div className="w-full md:w-1/2">
           <AnimatePresence>
           {isActive === 0 && (
@@ -56,7 +56,7 @@ const SpaAccordion = (props: Props) => {
               initial={{ opacity:0}}
               animate={{ opacity: 1}}
               transition={{ duration: 2 }}
-              src={Spa1} alt=""
+              src={Spa1} alt="Spa accordion graphic"
               className={isActive === 0 ? "image-show" : "image-hidden"} 
             />
             )}
@@ -67,7 +67,7 @@ const SpaAccordion = (props: Props) => {
               initial={{ opacity:0}}
               animate={{ opacity: 1}}
               transition={{ duration: 2 }}
-              src={Spa2} alt="" 
+              src={Spa2} alt="Spa accordion graphic" 
               className={isActive === 1 ? "image-show" : "image-hidden"} 
               />
             )}
@@ -78,7 +78,7 @@ const SpaAccordion = (props: Props) => {
               initial={{ opacity:0}}
               animate={{ opacity: 1}}
               transition={{ duration: 2 }}
-              src={Spa3} alt="" 
+              src={Spa3} alt="Spa accordion graphic" 
               className={isActive === 2 ? "image-show" : "image-hidden"} 
               />
             )}

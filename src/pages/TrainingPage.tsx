@@ -12,9 +12,7 @@ const TrainingPage = () => {
   return (
     <div className="app">
         <TrainingHero />
-        <div className="h-full md:h-full w-full bg-black">
-        <MainContent />
-      </div>
+          <MainContent />
         <TrainingSlider />
           <TrainerHeading />
         <ContactForms />  

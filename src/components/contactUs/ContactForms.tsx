@@ -28,7 +28,7 @@ const ContactForms = (Props: Props) => {
         <motion.div 
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5}}
+          viewport={{ once: true}}
           transition={{ duration: 2 }}
           variants={{
            hidden: { opacity: 0, x: -200 },
@@ -41,21 +41,19 @@ const ContactForms = (Props: Props) => {
         </motion.div>
       <motion.div 
         className="md:relative" 
-        initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5}}
-            transition={{ duration: 2 }}
-            variants={{
-              hidden: { opacity: 0, x:500 },
-              visible: { opacity: 1, x:0 }
-            }}
+        initial={{opacity: 0, x:500}}
+        whileInView={{opacity:1}}
+        viewport={{ once: true}}
+        animate={{opacity:1, x:0}}
+        transition={{ duration: 2 }}
+        
         >
           {/* HEADER */}
           <div 
             className="md:w-3/5"
             >
 
-              <div className="md:before:absolute md:before:-left-16 md:before:top-0 md:before:w-[0.5px] md:before:h-full md:before:bg-white" />
+              <div className="sm:hidden md:before:absolute md:before:-left-16 md:before:top-0 md:before:w-[0.5px] md:before:h-full md:before:bg-white" />
               <h1 className="basis-3/5 font-montserrat text-3xl font-bold text-primary-500 tracking-widest pt-8 md:pt-8">
                 Sign Up Now
               </h1>

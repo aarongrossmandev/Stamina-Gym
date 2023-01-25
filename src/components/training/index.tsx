@@ -11,14 +11,11 @@ const Training = () => {
       <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
           <motion.div 
           className="mx-auto w-4/6"
-          initial="hidden"
+          initial={{ opacity: 0, x:600 }}
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5}}
-          transition={{ duration: 1 }}
-          variants={{
-                hidden: { opacity: 0, x:600 },
-                visible: { opacity: 1, x:0 }
-          }}
+          animate={{opacity:1, x:0}}
+          viewport={{ once: true, amount:1}}
+          transition={{ duration: 2 }}
         >
           <div className="md:w-3/5 basis-2/5 text-end">
             <h1 className="header-text text-yellow-20 text-start">OUR TRAINERS</h1>

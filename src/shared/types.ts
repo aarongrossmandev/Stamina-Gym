@@ -10,3 +10,17 @@ export interface ClassType {
   description?: string; 
   image: string;
 }
+
+export interface ClassesClassType {
+  title: string;
+  image: string;
+  largeImage: string;
+  id: string;
+  time: any;
+  schedule: string;
+  target: string;
+  coach: string;
+  coachImage: string;
+}
+
+

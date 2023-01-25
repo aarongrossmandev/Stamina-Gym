@@ -103,7 +103,7 @@ const Benefits = () => {
                           visible: { opacity: 1, x:0 }
                       }}
                     >
-                      <h1 className="header-text">MILLIONS OF HAPPY MEMBERS GETTING{""}
+                      <h1 className="header-text mt-12 md:mt-0">MILLIONS OF HAPPY MEMBERS GETTING{""}
                         <span className="text-primary-500"> FIT</span>
                       </h1>
                     </motion.div>

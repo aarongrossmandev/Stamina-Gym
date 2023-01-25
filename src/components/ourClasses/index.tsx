@@ -99,12 +99,12 @@ const OurClasses = () => {
           </div>
         </motion.div>
 
-        <div className="mt-10 h-[350px] w-full overflow-x-auto cursor-grab md:cursor-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-primary-500 scrollbar-track-white">
+        <div className="mt-10 h-[350px] w-full overflow-x-auto md:cursor-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-primary-500 scrollbar-track-white">
           <ul className="w-[2800] whitespace-nowrap">
             {classes.map((item: ClassType, index) => (
               <Class 
                 key={`${item.name}-${index}`}
-                name={item.name}
+                name={item.name} 
                 description={item.description}
                 image={item.image}
               />

@@ -48,6 +48,7 @@ import pilatesLarge from '@/assets/pilates-large.jpg';
 import yogaLarge from '@/assets/yoga-large.jpg';
 import aquaAerobics from '@/assets/water-aerobics-large.jpg';
 import waterCardioLarge from '@/assets/water-cardio-large.jpg';
+import { intensityClassType } from './types';
 
 
 export const trainerImageSlide = [
@@ -83,7 +84,7 @@ export const SpaImageSlide = [
 ]
 
 
-export const intensityClass: Array<any> =  [
+export const intensityClass: Array<intensityClassType> =  [
   {
     image: BodyPumpImage,
     largeImage: BodyPumpLarge,  

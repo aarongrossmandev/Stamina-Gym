@@ -42,7 +42,7 @@ const SpaSlider = () => {
 
   return (
     <section className="w-full h-[100vh] bg-black overflow-hidden relative">
-      <div className="absolute bottom-2 left-[10%] xs:left-[30%] md:left-[40%] flex justify-center items-center p-12 mx-auto mb-8">
+      <div className="absolute bottom-2 left-[10%] xs:left-[20%] sm:left-[35%] md:left-[40%] flex justify-center items-center p-12 mx-auto mb-8">
       <span 
         onClick={() => setCurrentSlide(0)}
         className={`${slideBox} left-0 ${currentSlide === 0 ? "border border-primary-500" : "border border-transparent"}`}>
