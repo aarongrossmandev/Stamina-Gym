@@ -12,15 +12,15 @@ export interface ClassType {
 }
 
 export interface ClassesClassType {
-  title: string;
-  image: string;
-  largeImage: string;
-  id: string;
+  title: any;
+  image: any;
+  largeImage: any;
+  id: any;
   time: any;
-  schedule: string;
-  target: string;
-  coach: string;
-  coachImage: string;
+  schedule: any;
+  target: any;
+  coach: any;
+  coachImage: any;
 }
 
 

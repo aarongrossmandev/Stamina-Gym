@@ -21,7 +21,7 @@ const BodyMovementMap = () => {
     <div className="w-full bg-black pb-8 pt-16" id="bodyMovement">
       <div className="w-full md:w-5/6 mx-auto flex flex-col sm:flex-row flex-wrap justify-center gap-2 items-center">
         {/* CARD */}
-        {BodyMovement.map((data: ClassesClassType, index:number) => (
+        {BodyMovement.map((data: any, index:any) => (
           <Link to={'/classes/' + data.id} className="w-3/4 max-h-[375px] sm:w-[350px] relative overflow-hidden" key={"index" + data.id}>
           <ClassesItem 
             title={data.title}

@@ -12,7 +12,7 @@ import { ClassesClassType } from '@/shared/types';
 
 
 const ClassPage = () => {
-  const [details, setDetails] = useState<Object>({});
+  const [details, setDetails] = useState<any>({});
   const { id } = useParams();
   
  
@@ -32,7 +32,7 @@ const ClassPage = () => {
       if (data.id  === id) {
         const keyDetails = {}
        for (const key in data){
-        keyDetails[key] = data[key];
+        keyDetails[key] = data[key]
        }
         
         return setDetails(keyDetails)
