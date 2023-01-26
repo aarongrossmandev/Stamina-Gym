@@ -1,10 +1,9 @@
-import React from 'react'
-import SpaHeroImage from '@/assets/spa-hero.jpg';
+import SpaHeroImage from '@/assets/Spa-hero.jpg';
 import { Link } from 'react-router-dom';
 
-type Props = {}
 
-const SpaHero = (props: Props) => {
+
+const SpaHero = () => {
   return (
     <section className="w-full" id="trainers">
         <div className="bg-gradient-to-tr from-slate-900 to-teal-900 h-[100vh] w-full flex justify-end items-end relative">
