@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 const BenefitHero = () => {
   return (
     <section className="w-full">
-      <div className="bg-gradient-to-tr from-slate-900 to-teal-900 h-[100vh] w-full flex justify-start items-center relative">
-          <img src={BenefitHeroMain} alt="benefit-hero-graphic" className="h-full w-full object-cover object-top absolute mix-blend-overlay z-[-1]"  />
+      <div className="bg-gradient-to-tr from-slate-900 to-teal-900 h-[100vh] w-full flex justify-start items-center relative overflow-hidden">
+          <img src={BenefitHeroMain} alt="benefit-hero-graphic" className="h-full w-full object-cover object-top absolute left-0 top-0 mix-blend-overlay z-[-1]"  />
         
           <div className="xxs:ml-16 xs:ml-24 md:ml-56 mb-24 ">
             <h1 className="text-primary-500 text-6xl md:text-8xl font-bold leading-tight">BENEFITS <br /> 
