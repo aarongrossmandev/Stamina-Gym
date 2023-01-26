@@ -44,7 +44,7 @@ useEffect(() => {
 
 
 return (
-    <section className="w-full h-full">
+    <section className="w-full h-full overflow-x-hidden">
       {/* HERO SECTION */}
       <div className="bg-gradient-to-tr from-slate-900 to-teal-900 h-[100vh] w-full relative">
         <Link to="/classes">
