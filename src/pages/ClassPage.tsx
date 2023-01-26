@@ -28,7 +28,7 @@ const ClassPage = () => {
 
 
   useEffect(() => {
-    const getDetails = intensityClass.map((data:ClassesClassType) => {
+    const getDetails = intensityClass.map((data:any) => {
       if (data.id  === id) {
         const keyDetails = {}
        for (const key in data){
