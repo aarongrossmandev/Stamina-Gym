@@ -1,8 +1,8 @@
 import IntensityHeroImage from '../../assets/intensity-hero.jpg';
 
-type Props = {}
 
-const Intensity = (props: Props) => {
+
+const Intensity = () => {
   return (
     <section className="w-full" id="strengthPerformance">
         <div className="bg-gradient-to-tr from-slate-900 to-teal-900 h-[100vh] w-full flex justify-end items-end relative">

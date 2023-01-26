@@ -29,7 +29,7 @@ const ContactForms = (Props: Props) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true}}
-          transition={{ duration: 2 }}
+          transition={{ duration: 2, amount:1 }}
           variants={{
            hidden: { opacity: 0, x: -200 },
            visible: { opacity: 1, x:0 }
@@ -41,11 +41,14 @@ const ContactForms = (Props: Props) => {
         </motion.div>
       <motion.div 
         className="md:relative" 
-        initial={{opacity: 0, x:500}}
-        whileInView={{opacity:1}}
-        viewport={{ once: true}}
-        animate={{opacity:1, x:0}}
-        transition={{ duration: 2 }}
+        initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true}}
+          transition={{ duration: 2, amount:1 }}
+          variants={{
+           hidden: { opacity: 0, x: 200 },
+           visible: { opacity: 1, x:0 }
+         }}
         
         >
           {/* HEADER */}

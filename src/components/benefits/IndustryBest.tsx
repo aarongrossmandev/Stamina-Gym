@@ -13,20 +13,28 @@ const IndustryBest = () => {
       <div className="w-5/6 flex flex-col md:flex-row md:justify-between items-center mx-auto py-32">
          {/* Image Slider */}
         <motion.div 
-          initial={{opacity:0, x: -600}}
-          whileInView={{opacity: 1, x:0}}
-          transition={{duration: 2.5}}
-          viewport={{once: true }}
+           initial="hidden"
+           whileInView="visible"
+           viewport={{ once: true}}
+           transition={{ duration: 2, amount: 1 }}
+           variants={{
+            hidden: { opacity: 0, x: -200 },
+            visible: { opacity: 1, x:0 }
+          }}
           className="md:w-1/2">
             <img src={image1} alt="" className="w-full h-full rounded-lg border-4 border-primary-500 object-cover object-center" />
         </motion.div>
 
        {/* Description */}
         <motion.div 
-          initial={{opacity:0, x: 600}}
-          whileInView={{opacity: 1, x:0}}
-          transition={{duration: 2.5}}
-          viewport={{once: true }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true}}
+          transition={{ duration: 2, amount: 1 }}
+          variants={{
+           hidden: { opacity: 0, x: 200 },
+           visible: { opacity: 1, x:0 }
+         }}
           className="md:w-1/3 md:mx-8 text-center md:text-left">
           <h3 className="font-bold text-5xl text-primary-500 underline text-center mt-12 md:mt-0">Industry Best </h3>
           <p className="text-lg mt-8 text-white">

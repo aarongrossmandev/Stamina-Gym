@@ -26,12 +26,12 @@ const PoolAccordion = (props: Props) => {
         className="h-full w-full"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5}}
-        transition={{ duration: 2 }}
+        viewport={{ once: true}}
+        transition={{ duration: 2, amount: 1 }}
         variants={{
-            hidden: { opacity: 0, x:500 },
+            hidden: { opacity: 0, x:300 },
             visible: { opacity: 1, x:0 }
-        }} 
+        }}  
       >
         <div className="md:pb-12 pb-4 w-4/6 mx-auto pt-8 flex flex-1 md:justify-end justify-center">
         {isAboveMediumScreens ? (

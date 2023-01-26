@@ -8,8 +8,6 @@ const BannerBottom = () => {
           <div className="md:w-5/6 w-5/6 mx-auto md:flex justify-around items-center">
             <div className="text-white">
              <h4 className="text-2xl text-center">Start your journey to a happier, healthier lifestyle now by reaching out to start your fitness assessment! 
-              <br />
-              Join the millions who have already started their journey.
              </h4>
             </div>
             <div className="md-w-1/2  text-center md:mt-0 mt-6">

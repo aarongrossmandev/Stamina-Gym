@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 type Props = {
   title: string;
   image: string;
   index: number;
 }
+
+
 
 const ClassesItem = ({title, image, index}: Props): JSX.Element => {
   const [isHovered, setIsHovered] = useState(-1);
@@ -17,7 +18,7 @@ const ClassesItem = ({title, image, index}: Props): JSX.Element => {
 
 
   return (
-    <>
+   
       <div 
           className="card bg-primary-500 " 
           onMouseEnter={() => toggleHover(index)}
@@ -33,7 +34,7 @@ const ClassesItem = ({title, image, index}: Props): JSX.Element => {
             <h4 className="text-3xl ml-12 -rotate-12">{title}</h4>
           </div>
         </div>
-     </>
+     
   )
 }
 

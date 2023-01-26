@@ -13,6 +13,7 @@ const MainContent = (props: Props) => {
 
   const [isActive, setIsActive] = useState(0)
 
+
   function toggle(index:any){
     if(isActive === index ){
       return setIsActive(-1)
@@ -27,11 +28,11 @@ const MainContent = (props: Props) => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true}}
-        transition={{ duration: 2 }}
+        transition={{ duration: 2, amount:1 }}
         variants={{
-            hidden: { opacity: 0, x:500 },
-            visible: { opacity: 1, x:0 }
-        }} 
+         hidden: { opacity: 0, x: 200 },
+         visible: { opacity: 1, x:0 }
+       }}  
       >
         <div className="md:pb-12 pb-4 w-4/6 mx-auto pt-8 flex flex-1 md:justify-end justify-center">
         {isAboveMediumScreens ? (
@@ -53,9 +54,14 @@ const MainContent = (props: Props) => {
           <AnimatePresence>
           {isActive === 0 && (
             <motion.img
-              initial={{ opacity:0}}
-              animate={{ opacity: 1}}
-              transition={{ duration: 2 }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true}}
+            transition={{ duration: 2 }}
+            variants={{
+             hidden: { opacity: 0},
+             visible: { opacity: 1, }
+           }} 
               src={image1} alt="accordion graphic"
               className={isActive === 0 ? "image-show" : "image-hidden"} 
             />
@@ -64,9 +70,14 @@ const MainContent = (props: Props) => {
             <AnimatePresence>
             {isActive === 1 && (
             <motion.img
-              initial={{ opacity:0}}
-              animate={{ opacity: 1}}
-              transition={{ duration: 2 }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true}}
+            transition={{ duration: 2 }}
+            variants={{
+             hidden: { opacity: 0},
+             visible: { opacity: 1, }
+           }}
               src={image2} alt="accordion graphic" 
               className={isActive === 1 ? "image-show" : "image-hidden"} 
               />
@@ -75,9 +86,14 @@ const MainContent = (props: Props) => {
             <AnimatePresence>
             {isActive === 2 && (
             <motion.img
-              initial={{ opacity:0}}
-              animate={{ opacity: 1}}
-              transition={{ duration: 2 }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true}}
+            transition={{ duration: 2 }}
+            variants={{
+             hidden: { opacity: 0},
+             visible: { opacity: 1, }
+           }}
               src={image3} alt="accordion graphic" 
               className={isActive === 2 ? "image-show" : "image-hidden"} 
               />
