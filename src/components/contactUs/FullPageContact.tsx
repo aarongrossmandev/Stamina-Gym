@@ -43,10 +43,10 @@ const FullPageContact = (Props: Props) => {
         className="md:relative" 
         initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5}}
-            transition={{ duration: 2 }}
+            viewport={{ once: true, }}
+            transition={{ duration: 2, amount: 1 }}
             variants={{
-              hidden: { opacity: 0, x:500 },
+              hidden: { opacity: 0, x:200 },
               visible: { opacity: 1, x:0 }
             }}
         >
