@@ -55,7 +55,7 @@ const BenefitsAccordion = (props: Props) => {
               initial={{ opacity:0}}
               animate={{ opacity: 1}}
               transition={{ duration: 2 }}
-              src={Benefit1} alt=""
+              src={Benefit1} alt="benefit accordion graphic one"
               className={isActive === 0 ? "image-show" : "image-hidden"} 
             />
             )}
@@ -66,7 +66,7 @@ const BenefitsAccordion = (props: Props) => {
               initial={{ opacity:0}}
               animate={{ opacity: 1}}
               transition={{ duration: 2 }}
-              src={Benefit2} alt="" 
+              src={Benefit2} alt="benefit accordion graphic two" 
               className={isActive === 1 ? "image-show" : "image-hidden"} 
               />
             )}
@@ -77,7 +77,7 @@ const BenefitsAccordion = (props: Props) => {
               initial={{ opacity:0}}
               animate={{ opacity: 1}}
               transition={{ duration: 2 }}
-              src={Benefit3} alt="" 
+              src={Benefit3} alt="benefit accordion graphic three" 
               className={isActive === 2 ? "image-show" : "image-hidden"} 
               />
             )}
