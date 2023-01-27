@@ -9,7 +9,7 @@ import React from 'react'
 
 const SpaPage = () => {
   return (
-    <div className="app">
+    <div className="app overflow-x-hidden">
       <SpaHero />
       <SpaAccordion />
       <SpaSlider />

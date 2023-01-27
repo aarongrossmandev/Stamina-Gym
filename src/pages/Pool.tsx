@@ -8,7 +8,7 @@ import BannerBottom from '@/shared/BannerBottom'
 
 const Pool = () => {
   return (
-    <div className="app">
+    <div className="app overflow-x-hidden">
       <PoolHero />
       <PoolAccordion />
       <BannerBottom />

@@ -10,7 +10,7 @@ const TrainingPage = () => {
   
 
   return (
-    <div className="app">
+    <div className="app overflow-x-hidden">
         <TrainingHero />
           <MainContent />
         <TrainingSlider />

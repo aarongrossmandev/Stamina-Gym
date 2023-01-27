@@ -9,7 +9,7 @@ import Training from '@/components/training'
 
 function HomePage(){
   return (
-  <div className="app">  
+  <div className="app overflow-x-hidden">  
       <Home />
         <Hero />
         <Benefits />

@@ -8,7 +8,7 @@ import Footer from '@/components/footer'
 
 const BenefitsPage = () => {
   return (
-     <div className="app">
+     <div className="app overflow-x-hidden">
         <BenefitHero />
         <BenefitsAccordion />
         <TwentyFourHour />

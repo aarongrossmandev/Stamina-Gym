@@ -21,7 +21,7 @@ const ClassesPage = () => {
 
   return (
     
-    <div className="app relative">
+    <div className="app relative overflow-x-hidden">
       <Intensity />
         <IntensityMap />
       <BodyMovement />
