@@ -48,7 +48,7 @@ const BenefitsAccordion = (props: Props) => {
       </div>
       
         <div className="w-5/6 h-full mx-auto py-8 flex-col md:flex md:flex-row justify-between items-center overflow-hidden">
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 h-1/4 md:h-full">
           <AnimatePresence>
           {isActive === 0 && (
             <motion.img
