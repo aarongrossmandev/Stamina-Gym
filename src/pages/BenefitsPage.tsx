@@ -19,4 +19,4 @@ const BenefitsPage = () => {
   )
 }
 
-export default BenefitsPage
+export default BenefitsPage;

@@ -82,9 +82,7 @@ const BenefitsAccordion = (props: Props) => {
               />
             )}
             </AnimatePresence>
-            
-          
-        </div>
+          </div>
 
           <div className="w-full md:w-1/2 mx-auto flex flex-col">
           {BenefitsAccordionData.map((items, index) => (
